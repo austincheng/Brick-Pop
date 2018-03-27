@@ -4,7 +4,6 @@ import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileSystemView;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +12,7 @@ public class FileChooser extends JFrame {
     public FileChooser() {
         BufferedImage img = null;
         while (img == null) {
-            JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
             int returnValue = fileChooser.showOpenDialog(null);
             File selectedFile = null;
             if (returnValue == JFileChooser.APPROVE_OPTION) {
