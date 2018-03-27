@@ -14,10 +14,9 @@ public class Main {
         try {
             img = ImageIO.read(new File("Current.png"));
         } catch (IOException e) {
-            System.exit(1);
+            return;
         }
 
-        Board board = new Board(img);
-        Game game = new Game("Brick Pop", board);
+        ImageProcessor processor = new ImageProcessor("Image Processing", img);
     }
 }

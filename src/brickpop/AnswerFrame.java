@@ -13,6 +13,10 @@ import static brickpop.Constants.*;
 import static brickpop.Constants.DARK_COLOR;
 import static brickpop.Constants.PIECE_RADIUS;
 
+/**
+ * JFrame representing the solution board and walkthrough solver.
+ * @author Austin Cheng
+ */
 public class AnswerFrame extends JFrame {
     private Board _model;
     private ArrayList<Brick> _solution;

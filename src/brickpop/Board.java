@@ -50,15 +50,15 @@ public class Board {
         _score = 0;
     }
 
-    /** New board with board contests as defined by IMG.
-     *  IMG is and image with the board contents.
+    /** New board with board contests as defined by IMG and brick dimension BRICKDIM and brick radius BRICKRADIUS.
+     *  IMG is an image with the board contents.
      */
-    public Board(BufferedImage img) {
+    public Board(BufferedImage img, int brickDim, int brickRadius) {
         int width = img.getWidth();
         int height = img.getHeight();
 
-        int rows = (int) Math.round(height / 59.0);
-        int cols = (int) Math.round(width / 59.0);
+        int rows = (int) Math.round(height / (double) brickDim);
+        int cols = (int) Math.round(width / (double) brickDim);
 
         _board = new Brick[SIDE][SIDE];
         boardStates = new Stack<>();
@@ -77,8 +77,8 @@ public class Board {
 
         for (int r = SIDE - rows; r < SIDE; r++) {
             for (int c = 0; c < cols; c++) {
-                Colors color = Colors.color(img.getRGB(26 + c * 59,
-                        26 + (r - (SIDE - rows)) * 59));
+                Colors color = Colors.color(img.getRGB(brickRadius + c * brickDim,
+                        brickRadius + (r - (SIDE - rows)) * brickDim ));
                 _board[r][c] = new Brick(r, c, color);
                 if (counts.containsKey(color)) {
                     counts.put(color, counts.get(color) + 1);
