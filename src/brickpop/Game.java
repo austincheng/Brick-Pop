@@ -96,6 +96,7 @@ public class Game extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!solved) {
+                    _popSolution.push(null);
                     ArrayList<Brick> way = _model.bestFinish();
                     if (way == null) {
                         JOptionPane.showMessageDialog(Game.this, "No solution possible");
@@ -105,7 +106,6 @@ public class Game extends JFrame {
                         _popSolution.push(b);
                     }
                     solved = true;
-                    _popSolution.push(null);
                 }
             }
         });
