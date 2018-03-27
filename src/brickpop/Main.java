@@ -18,7 +18,6 @@ public class Main {
         }
 
         Board board = new Board(img);
-        GUI display = new GUI("Brick Pop", board);
-        display.display(true);
+        Game game = new Game("Brick Pop", board);
     }
 }

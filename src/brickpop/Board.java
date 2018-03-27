@@ -3,13 +3,12 @@ package brickpop;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Observable;
 import java.util.Stack;
 
 /** A Brick Pop board.
  *  @author Austin Cheng
  */
-public class Board extends Observable {
+public class Board {
     /** 2D representation of board. */
     private Brick[][] _board;
     /** Number of bricks on each side. */
@@ -20,6 +19,10 @@ public class Board extends Observable {
     private int _score;
     /** Map of colors to count of color. */
     private HashMap<Colors, Integer> counts;
+    /** Series of pops in solution (Used in GUI). */
+    private Stack<Brick> _popSolution;
+    /** Whether the stack contains the fully solved solution (Used in GUI). */
+    private boolean solved;
 
     /** New board with board contests as defined by BOARDSTRING.
      *  BOARDSTRING consists of 100 characters, each of which is
@@ -48,6 +51,8 @@ public class Board extends Observable {
             }
         }
         boardStates.push(copyAndPushItself(this));
+        _popSolution = new Stack<>();
+        solved = false;
         _score = 0;
     }
 
@@ -90,6 +95,8 @@ public class Board extends Observable {
         }
 
         boardStates.push(copyAndPushItself(this));
+        _popSolution = new Stack<>();
+        solved = false;
         _score = 0;
     }
 
@@ -336,10 +343,9 @@ public class Board extends Observable {
         if (boardStates.size() <= 1) {
             return;
         }
-        boardStates.pop();
+        Board previous = boardStates.pop();
+        _score = _score - previous.score();
         internalCopy(boardStates.peek());
-        setChanged();
-        notifyObservers();
     }
 
     /** Returns whether the board is completely empty. */
@@ -379,5 +385,30 @@ public class Board extends Observable {
     /** Returns the current score. */
     public int score() {
         return _score;
+    }
+
+    /** Sets the current score. */
+    public void setScore(int score) {
+        _score = score;
+    }
+
+    public Stack<Brick> popSolution() {
+        return _popSolution;
+    }
+
+    public void popOffSolution() {
+        _popSolution.pop();
+    }
+
+    public void pushIntoSolution(Brick b) {
+        _popSolution.push(b);
+    }
+
+    public boolean solved() {
+        return solved;
+    }
+
+    public void setSolved(boolean b) {
+        solved = b;
     }
 }
