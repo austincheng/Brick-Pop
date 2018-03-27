@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.Container;
 import java.awt.Graphics;
@@ -112,7 +113,19 @@ public class ImageProcessor extends JFrame{
                 instructionLabel.setText(instructions[count]);
             } else {
                 ImageProcessor.this.setVisible(false);
-                Board board = new Board(_img, dimensions);
+                Board board = null;
+                try {
+                    board = new Board(_img, dimensions);
+                } catch (IndexOutOfBoundsException exception) {
+                    JOptionPane.showMessageDialog(null, "Invalid dimension selection. Please selection dimensions again.", "Error", JOptionPane.ERROR_MESSAGE);
+                    ImageProcessor processor = new ImageProcessor("Image Processing", _img);
+                    return;
+                }
+                if (board.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Invalid dimension selection. Please selection dimensions again.", "Error", JOptionPane.ERROR_MESSAGE);
+                    ImageProcessor processor = new ImageProcessor("Image Processing", _img);
+                    return;
+                }
                 Game game = new Game("Brick Pop", board);
             }
         }

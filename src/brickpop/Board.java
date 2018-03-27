@@ -1,5 +1,7 @@
 package brickpop;
 
+import javax.swing.JOptionPane;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,7 +103,6 @@ public class Board {
                 }
             }
         }
-
         boardStates.push(copyAndPushItself(this));
         _score = 0;
     }
