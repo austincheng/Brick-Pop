@@ -30,20 +30,20 @@ import static brickpop.Constants.PIECE_RADIUS;
 public class Game extends JFrame {
     /** Model being displayed. */
     private Board _model;
+    /** Original board. */
+    private Board original;
     /** Score label. */
     private JLabel score;
     /** Board panel. */
     private BoardPanel boardPanel;
     /** Series of pops in solution. */
     private Stack<Brick> _popSolution;
-    /** Whether the stack contains the fully solved solution. */
-    private boolean solved;
 
     /** A new widget displaying MODEL. */
     public Game(String title, Board model) {
         _model = model;
+        original = new Board(model);
         _popSolution = new Stack<>();
-        solved = false;
 
         setSize(Constants.WIDTH + 20, Constants.HEIGHT + 80);
         setTitle(title);
@@ -95,18 +95,21 @@ public class Game extends JFrame {
         bestSolve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!solved) {
-                    _popSolution.push(null);
-                    ArrayList<Brick> way = _model.bestFinish();
-                    if (way == null) {
-                        JOptionPane.showMessageDialog(Game.this, "No solution possible");
-                        return;
-                    }
-                    for (Brick b : way) {
-                        _popSolution.push(b);
-                    }
-                    solved = true;
+                ArrayList<Brick> way = _model.bestFinish();
+                if (way == null) {
+                    JOptionPane.showMessageDialog(Game.this, "No solution possible");
+                    return;
                 }
+                for (Brick b : way) {
+                    _popSolution.push(b);
+                }
+
+                ArrayList<Brick> solution = new ArrayList<>();
+                while (!_popSolution.empty()) {
+                    solution.add(0, _popSolution.pop());
+                }
+                Game.this.setVisible(false);
+                new AnswerFrame(original, solution);
             }
         });
         menu.add(bestSolve);
@@ -116,40 +119,24 @@ public class Game extends JFrame {
         fastSolve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!solved) {
-                    _popSolution.push(null);
-                    ArrayList<Brick> way = _model.oneFinish();
-                    if (way == null) {
-                        JOptionPane.showMessageDialog(Game.this,"No solution possible");
-                        return;
-                    }
-                    for (Brick b : way) {
-                        _popSolution.push(b);
-                    }
-                    solved = true;
+                ArrayList<Brick> way = _model.oneFinish();
+                if (way == null) {
+                    JOptionPane.showMessageDialog(Game.this,"No solution possible");
+                    return;
                 }
+                for (Brick b : way) {
+                    _popSolution.push(b);
+                }
+
+                ArrayList<Brick> solution = new ArrayList<>();
+                while (!_popSolution.empty()) {
+                    solution.add(0, _popSolution.pop());
+                }
+                Game.this.setVisible(false);
+                new AnswerFrame(original, solution);
             }
         });
         menu.add(fastSolve);
-
-        /* Print Stack option. */
-        JMenuItem printStack = new JMenuItem("Print Stack");
-        printStack.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Start Stack");
-                for (Brick brick:_popSolution) {
-                    if (brick == null) {
-                        System.out.println("Solution called here.");
-                    } else {
-                        System.out.println("Pop " + brick.toString());
-                    }
-                }
-                System.out.println("End Stack");
-                System.out.println();
-            }
-        });
-        menu.add(printStack);
 
         menuBar.add(menu);
         setJMenuBar(menuBar);
@@ -211,20 +198,16 @@ public class Game extends JFrame {
             int mouseRow = y / (PIECE_RADIUS * 2);
             if (mouseCol <= 9 && mouseRow <= 9) {
                 Brick b = _model.get(mouseRow, mouseCol);
-                if (!solved) {
-                    _popSolution.push(b);
-                }
+                _popSolution.push(b);
                 _model.pop(b);
 
                 if (_model.isEmpty()) {
-                    System.out.println("Start Solution");
-                    for (Brick brick: _popSolution) {
-                        if (brick != null) {
-                            System.out.println("Pop " + brick.toString());
-                        }
+                    ArrayList<Brick> solution = new ArrayList<>();
+                    while (!_popSolution.empty()) {
+                        solution.add(0, _popSolution.pop());
                     }
-                    System.out.println("End Solution");
-                    System.exit(0);
+                    Game.this.setVisible(false);
+                    new AnswerFrame(original, solution);
                 }
                 update(getGraphics());
                 score.setText("Score: " + _model.score());

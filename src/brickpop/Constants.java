@@ -5,8 +5,8 @@ import java.awt.Color;
 public class Constants {
     /** Radius of circle representing a brick. */
     public static final int PIECE_RADIUS = 20;
-    /** Height of bottom score section. */
-    public static final int SCORE_HEIGHT = 80;
+    /** Font size of numbers during answer panel. */
+    public static final int FONT_SIZE = 20;
     /** Height of current drawing surface in pixels. */
     public static final int HEIGHT = Board.SIDE * (PIECE_RADIUS * 2);
     /** Width of current drawing surface in pixels. */

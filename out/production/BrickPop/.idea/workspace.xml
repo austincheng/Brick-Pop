@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798f8c77-9124-4383-a2e9-d1f50d9eb5c0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/brickpop/Constants.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/brickpop/AnswerFrame.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/brickPop.iml" afterPath="$PROJECT_DIR$/brickPop.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Board.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Board.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/BoardWidget.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/GUI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Main.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Main.class" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/Board.java" afterPath="$PROJECT_DIR$/src/brickpop/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/BoardWidget.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/BoardWidget.java" afterPath="$PROJECT_DIR$/src/brickpop/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/GUI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/GUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/Main.java" afterPath="$PROJECT_DIR$/src/brickpop/Main.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$2.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$3.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$BoardPanel.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$BoardPanel.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game.class" />
+      <change beforePath="$PROJECT_DIR$/src/brickpop/Constants.java" afterPath="$PROJECT_DIR$/src/brickpop/Constants.java" />
+      <change beforePath="$PROJECT_DIR$/src/brickpop/Game.java" afterPath="$PROJECT_DIR$/src/brickpop/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,34 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Brick.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brickpop/Brick.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding>
-                <element signature="e#3068#3069#0" expanded="true" />
-                <element signature="e#3146#3147#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Colors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1106">
-              <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="350">
+              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,48 +39,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+            <state relative-caret-position="4650">
+              <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4653#4654#0" expanded="true" />
+                <element signature="e#4699#4700#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java">
+      <file leaf-file-name="AnswerFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/brickpop/AnswerFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1294">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="809">
+              <caret line="76" column="81" lean-forward="false" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10000">
-              <caret line="412" column="19" lean-forward="false" selection-start-line="412" selection-start-column="19" selection-end-line="412" selection-end-column="19" />
-              <folding>
-                <element signature="e#11704#11705#0" expanded="true" />
-                <element signature="e#11739#11740#0" expanded="true" />
-                <element signature="e#11981#11982#0" expanded="true" />
-                <element signature="e#12016#12017#0" expanded="true" />
-                <element signature="e#12056#12057#0" expanded="true" />
-                <element signature="e#12090#12091#0" expanded="true" />
-                <element signature="e#12139#12140#0" expanded="true" />
-                <element signature="e#12175#12176#0" expanded="true" />
-                <element signature="e#12210#12211#0" expanded="true" />
-                <element signature="e#12239#12240#0" expanded="true" />
-                <element signature="e#12283#12284#0" expanded="true" />
-                <element signature="e#12309#12310#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,8 +70,8 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+            <state relative-caret-position="200">
+              <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -156,12 +108,17 @@
         <option value="$PROJECT_DIR$/src/brickpop/Colors.java" />
         <option value="$PROJECT_DIR$/src/brickpop/BoardWidget.java" />
         <option value="$PROJECT_DIR$/src/brickpop/GUI.java" />
-        <option value="$PROJECT_DIR$/src/brickpop/Main.java" />
-        <option value="$PROJECT_DIR$/src/brickpop/Constants.java" />
-        <option value="$PROJECT_DIR$/src/brickpop/Board.java" />
         <option value="$PROJECT_DIR$/src/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/TestGame.java" />
+        <option value="$PROJECT_DIR$/src/TestBoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/TestGame.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/TestBoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/Main.java" />
         <option value="$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/Board.java" />
         <option value="$PROJECT_DIR$/src/brickpop/Game.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/Constants.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/AnswerFrame.java" />
       </list>
     </option>
   </component>
@@ -228,10 +185,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,7 +339,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -391,11 +347,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21770334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22105263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -407,67 +362,73 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21770334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/brickpop/Game.java</url>
+          <line>204</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6750">
-          <caret line="276" column="41" lean-forward="false" selection-start-line="276" selection-start-column="41" selection-end-line="276" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
@@ -490,6 +451,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,8 +472,8 @@
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -547,25 +510,20 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -594,6 +552,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -606,33 +566,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2525">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
@@ -657,6 +603,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -674,20 +622,13 @@
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
@@ -712,6 +653,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -729,20 +672,13 @@
         <state relative-caret-position="2750">
           <caret line="119" column="71" lean-forward="false" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
@@ -765,6 +701,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,100 +733,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2550">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/GUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/brickpop/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
+        <state relative-caret-position="1425">
           <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="1550">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/TestGame.java" />
+    <entry file="file://$PROJECT_DIR$/src/brickpop/TestBoardPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/brickpop/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10000">
-          <caret line="412" column="19" lean-forward="false" selection-start-line="412" selection-start-column="19" selection-end-line="412" selection-end-column="19" />
-          <folding>
-            <element signature="e#11704#11705#0" expanded="true" />
-            <element signature="e#11739#11740#0" expanded="true" />
-            <element signature="e#11981#11982#0" expanded="true" />
-            <element signature="e#12016#12017#0" expanded="true" />
-            <element signature="e#12056#12057#0" expanded="true" />
-            <element signature="e#12090#12091#0" expanded="true" />
-            <element signature="e#12139#12140#0" expanded="true" />
-            <element signature="e#12175#12176#0" expanded="true" />
-            <element signature="e#12210#12211#0" expanded="true" />
-            <element signature="e#12239#12240#0" expanded="true" />
-            <element signature="e#12283#12284#0" expanded="true" />
-            <element signature="e#12309#12310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1294">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="-3350">
+          <caret line="90" column="50" lean-forward="false" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11381#11382#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        <state relative-caret-position="4650">
+          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/AnswerFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="76" column="81" lean-forward="false" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
           </folding>
         </state>
       </provider>
