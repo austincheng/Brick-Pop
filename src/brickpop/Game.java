@@ -34,9 +34,9 @@ public class Game extends JFrame {
     private JLabel score;
     /** Board panel. */
     private BoardPanel boardPanel;
-    /** Series of pops in solution (Used in GUI). */
+    /** Series of pops in solution. */
     private Stack<Brick> _popSolution;
-    /** Whether the stack contains the fully solved solution (Used in GUI). */
+    /** Whether the stack contains the fully solved solution. */
     private boolean solved;
 
     /** A new widget displaying MODEL. */
