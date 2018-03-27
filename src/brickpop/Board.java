@@ -19,10 +19,6 @@ public class Board {
     private int _score;
     /** Map of colors to count of color. */
     private HashMap<Colors, Integer> counts;
-    /** Series of pops in solution (Used in GUI). */
-    private Stack<Brick> _popSolution;
-    /** Whether the stack contains the fully solved solution (Used in GUI). */
-    private boolean solved;
 
     /** New board with board contests as defined by BOARDSTRING.
      *  BOARDSTRING consists of 100 characters, each of which is
@@ -51,8 +47,6 @@ public class Board {
             }
         }
         boardStates.push(copyAndPushItself(this));
-        _popSolution = new Stack<>();
-        solved = false;
         _score = 0;
     }
 
@@ -95,8 +89,6 @@ public class Board {
         }
 
         boardStates.push(copyAndPushItself(this));
-        _popSolution = new Stack<>();
-        solved = false;
         _score = 0;
     }
 
@@ -385,30 +377,5 @@ public class Board {
     /** Returns the current score. */
     public int score() {
         return _score;
-    }
-
-    /** Sets the current score. */
-    public void setScore(int score) {
-        _score = score;
-    }
-
-    public Stack<Brick> popSolution() {
-        return _popSolution;
-    }
-
-    public void popOffSolution() {
-        _popSolution.pop();
-    }
-
-    public void pushIntoSolution(Brick b) {
-        _popSolution.push(b);
-    }
-
-    public boolean solved() {
-        return solved;
-    }
-
-    public void setSolved(boolean b) {
-        solved = b;
     }
 }

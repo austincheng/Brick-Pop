@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="798f8c77-9124-4383-a2e9-d1f50d9eb5c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$BoardPanel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/brickpop/Board.java" afterPath="$PROJECT_DIR$/src/brickpop/Board.java" />
+      <change beforePath="$PROJECT_DIR$/src/brickpop/BoardPanel.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/brickpop/Game.java" afterPath="$PROJECT_DIR$/src/brickpop/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,23 +37,13 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="116" column="64" lean-forward="false" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
+            <state relative-caret-position="806">
+              <caret line="220" column="50" lean-forward="false" selection-start-line="220" selection-start-column="50" selection-end-line="220" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5017#5018#0" expanded="true" />
-                <element signature="e#5063#5064#0" expanded="true" />
+                <element signature="e#5186#5187#0" expanded="true" />
+                <element signature="e#5232#5233#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -65,21 +51,12 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7851">
-              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="256">
+              <caret line="90" column="50" lean-forward="false" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
               <folding>
-                <element signature="e#11669#11670#0" expanded="true" />
-                <element signature="e#11704#11705#0" expanded="true" />
-                <element signature="e#11942#11943#0" expanded="true" />
-                <element signature="e#11977#11978#0" expanded="true" />
-                <element signature="e#12013#12014#0" expanded="true" />
-                <element signature="e#12047#12048#0" expanded="true" />
-                <element signature="e#12092#12093#0" expanded="true" />
-                <element signature="e#12128#12129#0" expanded="true" />
-                <element signature="e#12159#12160#0" expanded="true" />
-                <element signature="e#12188#12189#0" expanded="true" />
-                <element signature="e#12228#12229#0" expanded="true" />
-                <element signature="e#12254#12255#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#11346#11347#0" expanded="true" />
+                <element signature="e#11381#11382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/brickpop/BoardWidget.java" />
         <option value="$PROJECT_DIR$/src/brickpop/GUI.java" />
         <option value="$PROJECT_DIR$/src/BoardPanel.java" />
-        <option value="$PROJECT_DIR$/src/brickpop/Board.java" />
         <option value="$PROJECT_DIR$/src/TestGame.java" />
         <option value="$PROJECT_DIR$/src/TestBoardPanel.java" />
         <option value="$PROJECT_DIR$/src/brickpop/TestGame.java" />
@@ -135,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/brickpop/Constants.java" />
         <option value="$PROJECT_DIR$/src/brickpop/Main.java" />
         <option value="$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/brickpop/Board.java" />
         <option value="$PROJECT_DIR$/src/brickpop/Game.java" />
       </list>
     </option>
@@ -362,7 +339,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -384,6 +361,37 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21770334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -446,8 +454,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -505,8 +513,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -554,8 +562,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -619,8 +627,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -676,8 +684,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,8 +739,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -837,27 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7851">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#11669#11670#0" expanded="true" />
-            <element signature="e#11704#11705#0" expanded="true" />
-            <element signature="e#11942#11943#0" expanded="true" />
-            <element signature="e#11977#11978#0" expanded="true" />
-            <element signature="e#12013#12014#0" expanded="true" />
-            <element signature="e#12047#12048#0" expanded="true" />
-            <element signature="e#12092#12093#0" expanded="true" />
-            <element signature="e#12128#12129#0" expanded="true" />
-            <element signature="e#12159#12160#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12254#12255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/BoardPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -866,14 +853,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/brickpop/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="116" column="64" lean-forward="false" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
+        <state relative-caret-position="256">
+          <caret line="90" column="50" lean-forward="false" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5017#5018#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11381#11382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="220" column="50" lean-forward="false" selection-start-line="220" selection-start-column="50" selection-end-line="220" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
           </folding>
         </state>
       </provider>
