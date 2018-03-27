@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798f8c77-9124-4383-a2e9-d1f50d9eb5c0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/brickpop/BoardPanel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/brickpop/Constants.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/brickPop.iml" afterPath="$PROJECT_DIR$/brickPop.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Board.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Board.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/BoardWidget.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/GUI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Main.class" afterPath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Main.class" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/Board.java" afterPath="$PROJECT_DIR$/src/brickpop/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/BoardWidget.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/BoardWidget.java" afterPath="$PROJECT_DIR$/src/brickpop/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/GUI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/GUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/brickpop/Main.java" afterPath="$PROJECT_DIR$/src/brickpop/Main.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game$BoardPanel.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/BrickPop/brickpop/Game.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/brickpop/Game.java" afterPath="$PROJECT_DIR$/src/brickpop/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,12 +41,12 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
-              <caret line="74" column="17" lean-forward="true" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state relative-caret-position="95">
+              <caret line="116" column="64" lean-forward="false" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4914#4915#0" expanded="true" />
-                <element signature="e#4960#4961#0" expanded="true" />
+                <element signature="e#5017#5018#0" expanded="true" />
+                <element signature="e#5063#5064#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -373,7 +365,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32999164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21770334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -454,8 +446,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -513,8 +505,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,8 +554,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,8 +619,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -684,8 +676,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,8 +731,8 @@
           <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -876,12 +868,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brickpop/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="74" column="17" lean-forward="true" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        <state relative-caret-position="95">
+          <caret line="116" column="64" lean-forward="false" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
           </folding>
         </state>
       </provider>

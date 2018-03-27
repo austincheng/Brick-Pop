@@ -1,11 +1,13 @@
 package brickpop;
 
 import javax.swing.BoxLayout;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Container;
@@ -90,7 +92,7 @@ public class Game extends JFrame {
                 if (!_model.solved()) {
                     ArrayList<Brick> way = _model.bestFinish();
                     if (way == null) {
-                        System.out.println("No solution possible");
+                        JOptionPane.showMessageDialog(Game.this, "No solution possible");
                         return;
                     }
                     for (Brick b : way) {
@@ -112,7 +114,7 @@ public class Game extends JFrame {
                     _model.pushIntoSolution(null);
                     ArrayList<Brick> way = _model.oneFinish();
                     if (way == null) {
-                        System.out.println("No solution possible");
+                        JOptionPane.showMessageDialog(Game.this,"No solution possible");
                         return;
                     }
                     for (Brick b : way) {
@@ -221,7 +223,6 @@ public class Game extends JFrame {
                 update(getGraphics());
                 score.setText("Score: " + _model.score());
             }
-            System.out.println("x: " + x + ", y: " + y);
         }
 
         @Override public void mousePressed(MouseEvent evt) { }
