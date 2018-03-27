@@ -15,13 +15,19 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 
+/**
+ * JFrame for pre-processing for the given image.
+ *  @author Austin Cheng
+ */
 public class ImageProcessor extends JFrame{
     private static final String[] instructions = {
             "Click on the left-most edge of the brick pop board.",
-            "Click on the right-most edge of the brick pop board. (Include the shadow)",
-            "Click on the top-most edge of the brick pop board.",
-            "Click on the left-most edge of any brick excluding right-most bricks.",
+            "Click on the right-most edge of the brick pop board. (Include the shadow) (Exclude empty columns)",
+            "Click on the top-most edge of the brick pop board. (Exclude empty rows)",
+            "Click on the bottom-most edge of the brick pop board. (Include the shadow)",
+            "Click on the left-most edge of any brick. (Pick one that has a right neighbor)",
             "Click on the right-most edge of that brick. (Don't include the shadow)",
+            "Click on the right-most edge of that brick. (Include the shadow)",
             "Click on the left-most edge of the brick immediately to the right of that brick."
     };
     private int[] dimensions;
@@ -30,7 +36,7 @@ public class ImageProcessor extends JFrame{
     private JLabel instructionLabel;
 
     public ImageProcessor(String title, BufferedImage img) {
-        dimensions = new int[6];
+        dimensions = new int[8];
         _img = img;
         count = 0;
 
@@ -95,18 +101,18 @@ public class ImageProcessor extends JFrame{
             int x = e.getX();
             int y = e.getY();
 
-            if (count == 2) {
+            if (count == 2 || count == 3) {
                 dimensions[count] = y;
             } else {
                 dimensions[count] = x;
             }
 
             count++;
-            if (count < 6) {
+            if (count < 8) {
                 instructionLabel.setText(instructions[count]);
             } else {
                 ImageProcessor.this.setVisible(false);
-                Board board = new Board(_img, dimensions[5] - dimensions[3], (dimensions[4] - dimensions[3]) / 2);
+                Board board = new Board(_img, dimensions);
                 Game game = new Game("Brick Pop", board);
             }
         }

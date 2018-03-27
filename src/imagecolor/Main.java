@@ -1,7 +1,5 @@
 package imagecolor;
 
-import org.apache.commons.collections.Buffer;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,6 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 
+/**
+ * Main program for image processing GUI.
+ * @author Austin Cheng
+ */
 public class Main {
     public static void main(String[] args) {
         int[] x = new int[10];
@@ -25,62 +27,7 @@ public class Main {
             return;
         }
 
-        //img = crop(img);
-
         GUI display = new GUI("Image", img);
-    }
-
-    // Failed Method
-    public static BufferedImage crop(BufferedImage img) throws IOException {
-        System.out.println("xmax: " + img.getWidth() + ", y: " + img.getHeight());
-        BufferedWriter file = new BufferedWriter(new FileWriter("loop.txt"));
-        BufferedImage result = img;
-        int x = 0;
-        while (x < result.getWidth()) {
-            boolean useless = true;
-            for (int y = 0; y < result.getHeight(); y++) {
-                int rgb = result.getRGB(x, y);
-                if (rightColors(rgb)) {
-                    useless = false;
-                    break;
-                }
-            }
-            if (useless) {
-                if (x != 0) {
-                    BufferedImage left = result.getSubimage(0, 0, x, result.getHeight());
-                    BufferedImage right = result.getSubimage(x, 0, result.getWidth() - x - 1, result.getHeight());
-                    result = concatH(left, right);
-                } else {
-                    result = result.getSubimage(1, 0, result.getWidth() - 1, result.getHeight());
-                }
-            } else {
-                System.out.println("useful");
-                x++;
-            }
-            file.write("x: " + x + "\n");
-        }
-
-        int y = 0;
-        while (y < result.getHeight()) {
-            boolean useless = true;
-            for (x = 0; x < result.getWidth(); x++) {
-                if (rightColors(result.getRGB(x, y))) {
-                    useless = false;
-                    break;
-                }
-            }
-            if (useless) {
-                if (y != 0) {
-                    BufferedImage left = result.getSubimage(0, 0, result.getWidth(), y);
-                    BufferedImage right = result.getSubimage(0, y, result.getWidth(), result.getHeight() - y - 1);
-                    result = concatH(left, right);
-                } else {
-                    result = result.getSubimage(0, 1, result.getWidth(), result.getHeight() - 1);
-                }
-            }
-            y++;
-        }
-        return result;
     }
 
     public static boolean rightColors(int rgb) {
@@ -109,19 +56,5 @@ public class Main {
         } else {
             return false;
         }
-    }
-
-    public static BufferedImage concatH(BufferedImage l, BufferedImage r) {
-        BufferedImage img = new BufferedImage(l.getWidth() + r.getWidth(), l.getHeight(), BufferedImage.TYPE_INT_RGB);
-        img.createGraphics().drawImage(l, 0, 0, null);
-        img.createGraphics().drawImage(r, l.getWidth(), 0, null);
-        return img;
-    }
-
-    public static BufferedImage concatV(BufferedImage t, BufferedImage b) {
-        BufferedImage img = new BufferedImage(t.getWidth(), t.getHeight() + b.getHeight(), BufferedImage.TYPE_INT_RGB);
-        img.createGraphics().drawImage(t, 0, 0, null);
-        img.createGraphics().drawImage(b, 0, t.getHeight(), null);
-        return img;
     }
 }

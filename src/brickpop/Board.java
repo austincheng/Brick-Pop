@@ -50,15 +50,28 @@ public class Board {
         _score = 0;
     }
 
-    /** New board with board contests as defined by IMG and brick dimension BRICKDIM and brick radius BRICKRADIUS.
+    /** New board with board contests as defined by IMG and DIMENSIONS.
+     *  DIMENSIONS[0] = board left-most x
+     *  DIMENSIONS[1] = board right-most x
+     *  DIMENSIONS[2] = board top-most y
+     *  DIMENSIONS[3] = board bottom-most y
+     *  DIMENSIONS[4] = brick left-most x
+     *  DIMENSIONS[5] = brick right-most x (without shadow)
+     *  DIMENSIONS[6] = brick right-most x (with shadow)
+     *  DIMENSIONS[7] = next brick left-most x
      *  IMG is an image with the board contents.
      */
-    public Board(BufferedImage img, int brickDim, int brickRadius) {
-        int width = img.getWidth();
-        int height = img.getHeight();
+    public Board(BufferedImage img, int[] dimensions) {
+        int brickRadius = (dimensions[5] - dimensions[4]) / 2;
+        int brickDim = (dimensions[6] - dimensions[4]);
+        int inBetween = dimensions[7] - dimensions[6];
+        int left = dimensions[0];
+        int top = dimensions[2];
+        int width = dimensions[1] - dimensions[0];
+        int height = dimensions[3] - dimensions[2];
 
-        int rows = (int) Math.round(height / (double) brickDim);
-        int cols = (int) Math.round(width / (double) brickDim);
+        int rows = (int) Math.round((height + inBetween) / (double) (brickDim + inBetween));
+        int cols = (int) Math.round((width + inBetween) / (double) (brickDim + inBetween));
 
         _board = new Brick[SIDE][SIDE];
         boardStates = new Stack<>();
@@ -77,8 +90,9 @@ public class Board {
 
         for (int r = SIDE - rows; r < SIDE; r++) {
             for (int c = 0; c < cols; c++) {
-                Colors color = Colors.color(img.getRGB(brickRadius + c * brickDim,
-                        brickRadius + (r - (SIDE - rows)) * brickDim ));
+                int centerX = left + c * (brickDim + inBetween) + brickRadius;
+                int centerY = top + (r - (SIDE - rows)) * (brickDim + inBetween) + brickRadius;
+                Colors color = Colors.color(img.getRGB(centerX, centerY));
                 _board[r][c] = new Brick(r, c, color);
                 if (counts.containsKey(color)) {
                     counts.put(color, counts.get(color) + 1);

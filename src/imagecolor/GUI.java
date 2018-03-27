@@ -7,6 +7,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 
+/**
+ * GUI for analyzing image positioning and color.
+ *  @author Austin Cheng
+ */
 public class GUI extends JFrame {
     private BufferedImage _img;
 
