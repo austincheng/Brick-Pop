@@ -4,6 +4,6 @@ package brickpop;
  *  @author Austin Cheng */
 public class Main {
     public static void main(String[] args) {
-        FileChooser fileChooser = new FileChooser();
+        FileChooser fileChooser = new FileChooser("Choose File");
     }
 }

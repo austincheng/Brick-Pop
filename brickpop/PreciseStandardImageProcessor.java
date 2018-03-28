@@ -26,32 +26,28 @@ import java.awt.image.BufferedImage;
 import static brickpop.Constants.LINE_COLOR;
 
 /**
- * JFrame for pre-processing for the given image.
+ * JFrame for standard pre-processing for the given image.
  *  @author Austin Cheng
  */
-public class ImageProcessor extends JFrame{
+public class PreciseStandardImageProcessor extends JFrame{
     private static final String[] instructions = {
             "Align the line with the left-most edge of the brick pop board.",
             "Align the line with the right-most edge of the brick pop board. (Include the shadow) (Exclude empty columns)",
             "Align the line with the top-most edge of the brick pop board. (Exclude empty rows)",
             "Align the line with the bottom-most edge of the brick pop board. (Include the shadow)",
-            "Align the line with the left-most edge of any brick. (Pick one that has a right neighbor)",
-            "Align the line with the right-most edge of that brick. (Don't include the shadow)",
-            "Align the line with the right-most edge of that brick. (Include the shadow)",
-            "Align the line with the left-most edge of the brick immediately to the right of that brick."
     };
     private int[] dimensions;
     private int[] mouseDimensions;
-    private BufferedImage _img;
     private int count;
-    private ImagePanel imagePanel;
+    private BufferedImage _img;
     private JLabel instructionLabel;
+    private ImagePanel imagePanel;
 
-    public ImageProcessor(String title, BufferedImage img) {
-        dimensions = new int[8];
-        mouseDimensions = new int[8];
-        _img = img;
+    public PreciseStandardImageProcessor(String title, BufferedImage img) {
+        dimensions = new int[4];
+        mouseDimensions = new int[4];
         count = 0;
+        _img = img;
 
         setSize(img.getWidth() + 20, img.getHeight() + 80);
         setTitle(title);
@@ -72,7 +68,7 @@ public class ImageProcessor extends JFrame{
         bottom.setLayout(layoutBottom);
 
         /* Instruction label inside bottom pane. */
-        instructionLabel = new JLabel(instructions[count]);
+        instructionLabel = new JLabel(instructions[0]);
         bottom.add(instructionLabel);
 
         /* Confirm button inside bottom pane. */
@@ -80,30 +76,14 @@ public class ImageProcessor extends JFrame{
         confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (count == 2 || count == 3) {
-                    dimensions[count] = mouseDimensions[count];
-                } else {
-                    dimensions[count] = mouseDimensions[count];
-                }
+                dimensions[count] = mouseDimensions[count];
                 count++;
-                if (count < 8) {
+                if (count < 4) {
                     instructionLabel.setText(instructions[count]);
                     imagePanel.update(imagePanel.getGraphics());
                 } else {
-                    ImageProcessor.this.setVisible(false);
-                    Board board;
-                    try {
-                        board = new Board(_img, dimensions);
-                    } catch (IndexOutOfBoundsException exception) {
-                        JOptionPane.showMessageDialog(null, "Invalid dimension selection. Please selection dimensions again.", "Error", JOptionPane.ERROR_MESSAGE);
-                        ImageProcessor processor = new ImageProcessor("Image Processing", _img);
-                        return;
-                    }
-                    if (board.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Invalid dimension selection. Please selection dimensions again.", "Error", JOptionPane.ERROR_MESSAGE);
-                        ImageProcessor processor = new ImageProcessor("Image Processing", _img);
-                        return;
-                    }
+                    PreciseStandardImageProcessor.this.setVisible(false);
+                    Board board = new Board(_img.getSubimage(dimensions[0], dimensions[2], dimensions[1] - dimensions[0], dimensions[3] - dimensions[2]));
                     Game game = new Game("Brick Pop", board);
                 }
             }
@@ -112,26 +92,6 @@ public class ImageProcessor extends JFrame{
         bottom.add(confirm);
 
         cp.add(bottom);
-
-        /* Menu bar at top. */
-        JMenuBar menuBar = new JMenuBar();
-        JMenu menu = new JMenu("Options");
-
-        /* Undo option. */
-        JMenuItem undo = new JMenuItem("Undo");
-        undo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (count >= 1) {
-                    count--;
-                    instructionLabel.setText(instructions[count]);
-                }
-            }
-        });
-        menu.add(undo);
-
-        menuBar.add(menu);
-        setJMenuBar(menuBar);
 
         setVisible(true);
     }
@@ -147,19 +107,18 @@ public class ImageProcessor extends JFrame{
             }
             addMouseListener(new MouseFollower());
             addMouseMotionListener(new MouseFollower());
-            addMouseWheelListener(new MouseFollowerScroll());
         }
         @Override
         protected void paintComponent(Graphics g) {
             g.drawImage(_img, 0, 0, null);
-                for (int i = 0; i <= count; i++) {
-                    g.setColor(LINE_COLOR);
-                    if (i == 2 || i == 3) {
-                        g.drawLine(0, mouseDimensions[i], _img.getWidth(), mouseDimensions[i]);
-                    } else {
-                        g.drawLine(mouseDimensions[i], 0, mouseDimensions[i], _img.getHeight());
-                    }
+            for (int i = 0; i <= count; i++) {
+                g.setColor(LINE_COLOR);
+                if (i == 2 || i == 3) {
+                    g.drawLine(0, mouseDimensions[i], _img.getWidth(), mouseDimensions[i]);
+                } else {
+                    g.drawLine(mouseDimensions[i], 0, mouseDimensions[i], _img.getHeight());
                 }
+            }
         }
 
         private class MouseFollower extends MouseInputAdapter {
@@ -185,19 +144,6 @@ public class ImageProcessor extends JFrame{
                     mouseDimensions[count] = y;
                 } else {
                     mouseDimensions[count] = x;
-                }
-                ImagePanel.this.update(ImagePanel.this.getGraphics());
-            }
-        }
-
-        private class MouseFollowerScroll implements MouseWheelListener {
-            @Override
-            public void mouseWheelMoved(MouseWheelEvent e) {
-                int notches = e.getWheelRotation();
-                if (count == 2 || count == 3) {
-                    mouseDimensions[count] = Math.min(Math.max(0, mouseDimensions[count] + notches), _img.getHeight());
-                } else {
-                    mouseDimensions[count] = Math.min(Math.max(0, mouseDimensions[count] + notches), _img.getWidth());
                 }
                 ImagePanel.this.update(ImagePanel.this.getGraphics());
             }

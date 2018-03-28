@@ -52,6 +52,57 @@ public class Board {
         _score = 0;
     }
 
+    /** New board with board contests as defined by IMG.
+     *  IMG is a perfectly-cropped image with the standard board contents.
+     *  A standard board has the following parameters:
+     *  Brick Dimension [without shadow] = 12.25 * [shadow length]
+     *  Brick Dimension [with shadow] = 13.25 * [shadow length]
+     *  Brick to Brick Length = 14.75 * [shadow length]
+     *  Width = 10 * [Brick to brick length] - [length in between bricks]
+     *  Brick Dimension [without shadow] = dimensions[5] - dimensions[4]
+     *  Brick Dimension [with shadow] = dimensions[6] - dimensions[4]
+     *  Shadow Length = dimensions[6] - dimensions[5]
+     *  Brick to Brick Length = dimensions[7] - dimensions[4]
+     *  Length in between bricks = dimensions[7] - dimensions[6]
+     *
+     *  In case you're wondering how I got the numbers in the code of the method:
+     *  Lets abbreviate dimensions to d and solve this system of equations.
+     *  d[5] - d[4] = 12.25(d[6] - d[5])
+     *  d[6] - d[4] = 13.25(d[6] - d[5])
+     *  d[7] - d[4] = 14.75(d[6] - d[5])
+     *  Width = 10(d[7] - d[4]) - (d[7] - d[6])
+     *  Since all these numbers will be relative to each other, we can arbitrarily set
+     *  d[4] to be 0 (meaning we start out relative measurements with the left-most brick).
+     *  d[5] = 12.25(d[6] - d[5])
+     *  d[6] = 13.25(d[6] - d[5])
+     *  d[7] = 14.75(d[6] - d[5])
+     *  Width = 10d[7] - (d[7] - d[6]) = 9d[7] + d[6]
+     *  The first two equations are redundant and can be simplified to:
+     *  13.25d[5] = 12.25d[6]
+     *  d[7] = 14.75(d[6] - d[5])
+     *  Width = 10d[7] - (d[7] - d[6]) = 9d[7] + d[6]
+     *  Now the first two equations can be used to eliminate d[5] to get:
+     *  d[7] = (59/53)d[6]
+     *  Width = 9d[7] + d[6]
+     *  d[7] and d[6] can now easily be solved for.
+     *  Going back to solve for d[5], we finally get
+     *  d[5] = (49/584) * Width
+     *  d[6] = (53/584) * Width
+     *  d[7] = (59/584) * Width
+     */
+    public Board(BufferedImage img) {
+        this(img, new int[] {
+                0,
+                img.getWidth(),
+                0,
+                img.getHeight(),
+                0,
+                (int) ((49.0 / 584) * img.getWidth()),
+                (int) ((53.0 / 584) * img.getWidth()),
+                (int) ((59.0 / 584) * img.getWidth())
+        });
+    }
+
     /** New board with board contests as defined by IMG and DIMENSIONS.
      *  DIMENSIONS[0] = board left-most x
      *  DIMENSIONS[1] = board right-most x
@@ -65,7 +116,7 @@ public class Board {
      */
     public Board(BufferedImage img, int[] dimensions) {
         int brickRadius = (dimensions[5] - dimensions[4]) / 2;
-        int brickDim = (dimensions[6] - dimensions[4]);
+        int brickDim = dimensions[6] - dimensions[4];
         int inBetween = dimensions[7] - dimensions[6];
         int left = dimensions[0];
         int top = dimensions[2];
