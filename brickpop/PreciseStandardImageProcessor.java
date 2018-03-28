@@ -7,26 +7,19 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputAdapter;
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
 import java.awt.image.BufferedImage;
 
 import static brickpop.Constants.LINE_COLOR;
 
 /**
- * JFrame for standard pre-processing for the given image.
+ * JFrame for standard pre-processing for the given image with precise cropping.
  *  @author Austin Cheng
  */
 public class PreciseStandardImageProcessor extends JFrame{
@@ -40,8 +33,8 @@ public class PreciseStandardImageProcessor extends JFrame{
     private int[] mouseDimensions;
     private int count;
     private BufferedImage _img;
-    private JLabel instructionLabel;
     private ImagePanel imagePanel;
+    private JLabel instructionLabel;
 
     public PreciseStandardImageProcessor(String title, BufferedImage img) {
         dimensions = new int[4];

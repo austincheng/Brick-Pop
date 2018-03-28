@@ -23,6 +23,7 @@ public class GUI extends JFrame {
         setVisible(true);
     }
 
+    /** Image panel inside GUI. */
     private class ImagePanel extends JPanel implements MouseListener {
         public ImagePanel() {
             addMouseListener(this);

@@ -128,6 +128,7 @@ public class CustomImageProcessor extends JFrame{
         setVisible(true);
     }
 
+    /** Image with Image Processor frame. */
     private class ImagePanel extends JPanel {
         public ImagePanel() {
             for (int i = 0; i < mouseDimensions.length; i++) {

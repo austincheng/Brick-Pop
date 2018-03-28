@@ -20,26 +20,23 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 import static brickpop.Constants.*;
-import static brickpop.Constants.DARK_COLOR;
-import static brickpop.Constants.PIECE_RADIUS;
 
 
-/** JFrame representing everything including the board and the score.
+/** JFrame representing the experiment board and the score.
  *  @author Austin Cheng
  */
 public class Game extends JFrame {
-    /** Model being displayed. */
+    /** Board that the Game experiments with. */
     private Board _model;
     /** Original board. */
     private Board original;
-    /** Score label. */
-    private JLabel score;
-    /** Board panel. */
-    private BoardPanel boardPanel;
     /** Series of pops in solution. */
     private Stack<Brick> _popSolution;
+    /** Board panel. */
+    private BoardPanel boardPanel;
+    /** Score label. */
+    private JLabel score;
 
-    /** A new widget displaying MODEL. */
     public Game(String title, Board model) {
         _model = model;
         original = new Board(model);
@@ -88,7 +85,6 @@ public class Game extends JFrame {
             }
         });
         menu.add(undo);
-
 
         /* Best Solve option. */
         JMenuItem bestSolve = new JMenuItem("Best Solve");
@@ -144,6 +140,7 @@ public class Game extends JFrame {
         setVisible(true);
     }
 
+    /** Board within the Game. */
     private class BoardPanel extends JPanel implements MouseListener {
         public BoardPanel() {
             addMouseListener(this);

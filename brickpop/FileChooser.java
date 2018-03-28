@@ -13,16 +13,21 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/** JFrame representing initial file choosing option buttons.
+ *  @author Austin Cheng
+ */
 public class FileChooser extends JFrame {
     public FileChooser(String title) {
         setTitle(title);
         setSize(500, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        /* Main Pane for entire JFrame. */
         Container cp = getContentPane();
         BoxLayout layout = new BoxLayout(cp, BoxLayout.Y_AXIS);
         cp.setLayout(layout);
 
+        /* Standard Button. */
         JButton standard = new JButton("Perfectly Cropped Full Brick Pop Board");
         standard.addActionListener(new ActionListener() {
             @Override
@@ -35,6 +40,7 @@ public class FileChooser extends JFrame {
         });
         cp.add(standard);
 
+        /* Standard Fast Cropping Button. */
         JButton standardNoisyFast = new JButton("Uncropped Full Brick Pop Board (fast cropping)");
         standardNoisyFast.addActionListener(new ActionListener() {
             @Override
@@ -46,6 +52,7 @@ public class FileChooser extends JFrame {
         });
         cp.add(standardNoisyFast);
 
+        /* Standard Precise Cropping Button. */
         JButton standardNoisyPrecise = new JButton("Uncropped Full Brick Pop Board (precise cropping)");
         standardNoisyPrecise.addActionListener(new ActionListener() {
             @Override
@@ -57,6 +64,7 @@ public class FileChooser extends JFrame {
         });
         cp.add(standardNoisyPrecise);
 
+        /* Custom Button. */
         JButton custom = new JButton("Custom Brick Pop Board");
         custom.addActionListener(new ActionListener() {
             @Override
@@ -71,6 +79,7 @@ public class FileChooser extends JFrame {
         setVisible(true);
     }
 
+    /** Prompts the user to select an image and returns that image. */
     private BufferedImage chooseImage() {
         BufferedImage img = null;
 
