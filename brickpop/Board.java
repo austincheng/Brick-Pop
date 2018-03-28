@@ -1,7 +1,5 @@
 package brickpop;
 
-import javax.swing.JOptionPane;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,10 +9,10 @@ import java.util.Stack;
  *  @author Austin Cheng
  */
 public class Board {
-    /** 2D representation of board. */
-    private Brick[][] _board;
     /** Number of bricks on each side. */
     static final int SIDE = 10;
+    /** 2D representation of board. */
+    private Brick[][] _board;
     /** Previous board states. */
     private Stack<Board> boardStates;
     /** Current score. */
@@ -22,7 +20,7 @@ public class Board {
     /** Map of colors to count of color. */
     private HashMap<Colors, Integer> counts;
 
-    /** New board with board contests as defined by BOARDSTRING.
+    /** New board with board contents as defined by BOARDSTRING.
      *  BOARDSTRING consists of 100 characters, each of which is
      *  r, y, g, b, p, d, or -, optionally interspersed with whitespace.
      *  These give the contents of the Board starting from top left moving right
@@ -35,7 +33,9 @@ public class Board {
         }
         _board = new Brick[SIDE][SIDE];
         boardStates = new Stack<>();
+        _score = 0;
         counts = new HashMap<>();
+
         for (int r = 0; r < SIDE; r++) {
             for (int c = 0; c < SIDE; c++) {
                 Colors color = Colors.color(boardString.substring(r * SIDE + c,
@@ -48,44 +48,52 @@ public class Board {
                 }
             }
         }
+
         boardStates.push(copyAndPushItself(this));
-        _score = 0;
     }
 
-    /** New board with board contests as defined by IMG.
+    /** New board with board contents as defined by IMG.
      *  IMG is a perfectly-cropped image with the standard board contents.
+     *
      *  A standard board has the following parameters:
      *  Brick Dimension [without shadow] = 12.25 * [shadow length]
      *  Brick Dimension [with shadow] = 13.25 * [shadow length]
      *  Brick to Brick Length = 14.75 * [shadow length]
      *  Width = 10 * [Brick to brick length] - [length in between bricks]
+     *
+     *  In terms of the DIMENSIONS parameter of the other image constructor:
      *  Brick Dimension [without shadow] = dimensions[5] - dimensions[4]
      *  Brick Dimension [with shadow] = dimensions[6] - dimensions[4]
      *  Shadow Length = dimensions[6] - dimensions[5]
      *  Brick to Brick Length = dimensions[7] - dimensions[4]
      *  Length in between bricks = dimensions[7] - dimensions[6]
      *
-     *  In case you're wondering how I got the numbers in the code of the method:
+     *
+     *
+     *  In case you're wondering how I got the numbers in the code of the constructor:
      *  Lets abbreviate dimensions to d and solve this system of equations.
      *  d[5] - d[4] = 12.25(d[6] - d[5])
      *  d[6] - d[4] = 13.25(d[6] - d[5])
      *  d[7] - d[4] = 14.75(d[6] - d[5])
      *  Width = 10(d[7] - d[4]) - (d[7] - d[6])
+     *
      *  Since all these numbers will be relative to each other, we can arbitrarily set
      *  d[4] to be 0 (meaning we start out relative measurements with the left-most brick).
      *  d[5] = 12.25(d[6] - d[5])
      *  d[6] = 13.25(d[6] - d[5])
      *  d[7] = 14.75(d[6] - d[5])
      *  Width = 10d[7] - (d[7] - d[6]) = 9d[7] + d[6]
+     *
      *  The first two equations are redundant and can be simplified to:
      *  13.25d[5] = 12.25d[6]
      *  d[7] = 14.75(d[6] - d[5])
      *  Width = 10d[7] - (d[7] - d[6]) = 9d[7] + d[6]
+     *
      *  Now the first two equations can be used to eliminate d[5] to get:
      *  d[7] = (59/53)d[6]
      *  Width = 9d[7] + d[6]
-     *  d[7] and d[6] can now easily be solved for.
-     *  Going back to solve for d[5], we finally get
+     *
+     *  d[7] and d[6] can now easily be solved for, and going back to solve for d[5]:
      *  d[5] = (49/584) * Width
      *  d[6] = (53/584) * Width
      *  d[7] = (59/584) * Width
@@ -128,7 +136,9 @@ public class Board {
 
         _board = new Brick[SIDE][SIDE];
         boardStates = new Stack<>();
+        _score = 0;
         counts = new HashMap<>();
+
         for (int r = 0; r < SIDE - rows; r++) {
             for (int c = 0; c < SIDE; c++) {
                 _board[r][c] = new Brick(r, c, Colors.EMPTY);
@@ -154,8 +164,8 @@ public class Board {
                 }
             }
         }
+
         boardStates.push(copyAndPushItself(this));
-        _score = 0;
     }
 
     /** A copy of B. */
@@ -166,7 +176,6 @@ public class Board {
     /** Copy B into me. */
     private void internalCopy(Board b) {
         _board = new Brick[SIDE][SIDE];
-        _score = b.score();
         for (int r = 0; r < SIDE; r++) {
             for (int c = 0; c < SIDE; c++) {
                 _board[r][c] = b.get(r, c);
@@ -176,6 +185,7 @@ public class Board {
         for (Board state: b.boardStates) {
             boardStates.push(state);
         }
+        _score = b.score();
         counts = new HashMap<>();
         for (Colors c: b.counts.keySet()) {
             counts.put(c, b.counts.get(c));
@@ -191,7 +201,7 @@ public class Board {
     }
 
     /** Deals with all empty spaces (aside from empty columns). */
-    public void fillEmpty() {
+    private void fillEmpty() {
         int row = SIDE - 1;
         while (row >= 1) {
             for (Brick b: _board[row]) {
@@ -213,7 +223,7 @@ public class Board {
     }
 
     /** Shifts columns such that COLUMN is an empty column. */
-    public void fillEmptyColumn(int column) {
+    private void fillEmptyColumn(int column) {
         assert isEmptyColumn(column);
 
         while (column != 9) {
@@ -232,7 +242,7 @@ public class Board {
     }
 
     /** Returns whether COLUMN is an empty column. */
-    public boolean isEmptyColumn(int column) {
+    private boolean isEmptyColumn(int column) {
         for (int r = 0; r < SIDE; r++) {
             if (_board[r][column].color() != Colors.EMPTY) {
                 return false;
@@ -243,7 +253,7 @@ public class Board {
 
     /** Returns whether every column to the right of COLUMN
      *  including itself is empty. */
-    public boolean isEmptyRightColumns(int column) {
+    private boolean isEmptyRightColumns(int column) {
         for (int c = column; c < SIDE; c++) {
             for (int r = 0; r < SIDE; r++) {
                 if (_board[r][c].color() != Colors.EMPTY) {
@@ -284,13 +294,13 @@ public class Board {
     }
 
     /** Returns the score resulting from popping B. */
-    public int popScore(Brick b) {
+    private int popScore(Brick b) {
         int numBlocks = b.block(this).size();
         return numBlocks * (numBlocks - 1);
     }
 
     /** Returns the score resulting from popping bricks in WAY in order. */
-    public int gameScore(ArrayList<Brick> way) {
+    private int gameScore(ArrayList<Brick> way) {
         Board trial = new Board(this);
         int score = 0;
         for (Brick b: way) {
@@ -301,7 +311,7 @@ public class Board {
     }
 
     /** Returns a list of all unique pops. */
-    public ArrayList<Brick> uniquePops() {
+    private ArrayList<Brick> uniquePops() {
         ArrayList<Brick> uniquePops = new ArrayList<>();
         for (Brick[] row: _board) {
             for (Brick b: row) {
@@ -315,8 +325,7 @@ public class Board {
     }
 
     /** Returns whether any item in CONTAINS is in LST. */
-    private static boolean hasAny(ArrayList<Brick> lst,
-                                  ArrayList<Brick> contains) {
+    private static boolean hasAny(ArrayList<Brick> lst, ArrayList<Brick> contains) {
         for (Brick b: contains) {
             if (lst.contains(b)) {
                 return true;
@@ -326,7 +335,7 @@ public class Board {
     }
 
     /** Returns all possible ways to finish the game. */
-    public ArrayList<ArrayList<Brick>> finishGame() {
+    private ArrayList<ArrayList<Brick>> finishGame() {
         ArrayList<Brick> uniquePops = uniquePops();
         ArrayList<ArrayList<Brick>> ways = new ArrayList<>();
 

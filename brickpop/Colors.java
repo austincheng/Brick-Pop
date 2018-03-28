@@ -2,8 +2,7 @@ package brickpop;
 
 import java.awt.Color;
 
-/** Describes the different colors of bricks on a
- *  Brick Pop board.
+/** Describes the different colors of bricks on a Brick Pop board.
  *  @author Austin Cheng
  */
 public enum Colors {

@@ -93,6 +93,26 @@ public class PreciseStandardImageProcessor extends JFrame{
 
         cp.add(bottom);
 
+        /* Menu bar at top. */
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Options");
+
+        /* Undo option. */
+        JMenuItem undo = new JMenuItem("Undo");
+        undo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (count >= 1) {
+                    count--;
+                    instructionLabel.setText(instructions[count]);
+                }
+            }
+        });
+        menu.add(undo);
+
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
+
         setVisible(true);
     }
 

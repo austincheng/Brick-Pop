@@ -10,16 +10,17 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import static brickpop.Constants.*;
-import static brickpop.Constants.DARK_COLOR;
-import static brickpop.Constants.PIECE_RADIUS;
 
 /**
  * JFrame representing the solution board and walkthrough solver.
  * @author Austin Cheng
  */
 public class AnswerFrame extends JFrame {
+    /** Board that the AnswerFrame answers to. */
     private Board _model;
+    /** Sequence of bricks to pop for the solution. */
     private ArrayList<Brick> _solution;
+
     public AnswerFrame(Board model, ArrayList<Brick> solution) {
         _model = model;
         _solution = solution;
@@ -31,10 +32,12 @@ public class AnswerFrame extends JFrame {
         setVisible(true);
     }
 
+    /** Board within the AnswerFrame. */
     private class BoardPanel extends JPanel implements MouseListener {
         public BoardPanel() {
             addMouseListener(this);
         }
+
         @Override
         protected void paintComponent(Graphics g) {
             g.setColor(BACKGROUND_COLOR);

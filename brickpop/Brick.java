@@ -22,7 +22,7 @@ public class Brick {
 
     /** Returns a list of all bricks adjacent
      *  on board BOARD that are the same color. */
-    public ArrayList<Brick> sameAdjacent(Board board) {
+    private ArrayList<Brick> sameAdjacent(Board board) {
         Brick[][] model = board.getBoard();
         ArrayList<Brick> adjacents = new ArrayList<>();
         if (_row < Board.SIDE - 1) {
@@ -78,7 +78,7 @@ public class Brick {
     }
 
     /** Returns whether BRICKS contains a complete block on BOARD. */
-    public static boolean hasAllBlock(Board board, ArrayList<Brick> bricks) {
+    private static boolean hasAllBlock(Board board, ArrayList<Brick> bricks) {
         for (Brick b: bricks) {
             for (Brick adjacent: b.sameAdjacent(board)) {
                 if (!bricks.contains(adjacent)) {
