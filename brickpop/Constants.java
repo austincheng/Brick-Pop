@@ -30,5 +30,7 @@ public class Constants {
     public static final Color DARK_COLOR = new Color(151, 136, 116);
     /** Color of background/empty bricks. */
     public static final Color BACKGROUND_COLOR = Color.WHITE;
+    /** Color of lines during image processing. */
+    public static final Color LINE_COLOR = Color.BLACK;
 
 }
